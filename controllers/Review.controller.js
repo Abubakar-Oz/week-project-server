@@ -10,6 +10,7 @@ module.exports.reviewsController = {
     try {
       const review = await Review.create({
         text: req.body.text,
+        data: req.body.data
       })
 
       return res.json(review)
